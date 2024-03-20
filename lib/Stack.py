@@ -1,13 +1,18 @@
 class Stack:
 
     def __init__(self, items = [], limit = 100):
-        pass
+        self.limit = limit
+        if len(items) <= self.limit:
+            self.items = items
 
     def isEmpty(self):
-        pass
+        return [True if self.items else False]
 
     def push(self, item):
-        pass
+        if len(self.items) < 100:
+            self.items.push(item)
+        else:
+            raise MemoryError("Stack Full")
 
     def pop(self):
         pass
